@@ -5,6 +5,7 @@ class Catalog {
 
   #catalog = [];
 
+  // movies database (IDs)
   #movieDB = [
     'tt0038650',
     'tt0107688',
@@ -38,13 +39,15 @@ class Catalog {
     'tt0100142',
   ];
 
+  // generate a random number between 1 and total movies inside movie database
   randomID() {
     return Math.floor(Math.random() * this.#movieDB.length);
   }
 
+  // create a random catalog based on movie database | is set to get 13 movies
   createCatalog() {
     this.#catalog = [];
-    while (this.#catalog.length < 15) {
+    while (this.#catalog.length < 13) {
       let id = this.randomID();
       if (this.#catalog.indexOf(this.#movieDB[id]) == -1) {
         this.#catalog.push(this.#movieDB[id]);
@@ -52,6 +55,7 @@ class Catalog {
     }
   }
 
+  // return the random catalog created
   getCatalog() {
     return this.#catalog;
   }
