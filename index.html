@@ -23,6 +23,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/index.css" />
 
     <!-- Title -->
     <title>Moviee</title>
@@ -65,7 +66,9 @@
     </header>
 
     <!-- MAIN -->
-    <main></main>
+    <main>
+      <div class="catalog d-flex w-100 flex-wrap justify-content-evenly"></div>
+    </main>
 
     <!-- SCRIPTS -->
     <!-- Script - bootstrap bundle 5.1 -->
@@ -75,10 +78,19 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Script - Jquery 3.6 -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Script - Catalog -->
     <script src="./model/Catalog.js"></script>
     <!-- Script - API -->
     <script src="./model/Api.js"></script>
+    <!-- Script - View -->
+    <script src="./view/index-view.js"></script>
     <!-- Script - Controller -->
     <script src="./controller/index-controller.js"></script>
   </body>

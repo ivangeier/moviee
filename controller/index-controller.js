@@ -6,7 +6,7 @@ async function populateScreen() {
   let movies = catalog.getCatalog();
   for (let movie of movies) {
     let data = await api.findMovieID(movie);
-    console.log(data);
+    appendMovieOnScreen(data);
   }
 }
 
