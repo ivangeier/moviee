@@ -1,7 +1,7 @@
 class Api {
   #urlOMDB = `https://www.omdbapi.com/?apikey=c30ccb91&`;
 
-  // fetch data based on URL
+  // fetch data based on URL (PROMISE)
   fetchURL(url) {
     return new Promise((resolve, reject) => {
       fetch(url)
@@ -15,20 +15,20 @@ class Api {
   async findMovieTitle(title) {
     let url = `${this.#urlOMDB}t=${title}`;
     let data = await this.fetchURL(url);
-    console.log(data);
+    return data;
   }
 
-  // fecth movies based on ID
+  // fetch movies based on ID
   async findMovieID(id) {
     let url = `${this.#urlOMDB}i=${id}`;
     let data = await this.fetchURL(url);
-    console.log(data);
+    return data;
   }
 
-  // fetch CEP (ZIP code from brazil) based o CEP
+  // fetch CEP (ZIP code from brazil) based on CEP
   async buscaCEP(cep) {
     let url = `https://viacep.com.br/ws/${cep}/json/`;
     let data = await this.fetchURL(url);
-    console.log(data);
+    return data;
   }
 }
