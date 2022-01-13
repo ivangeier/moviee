@@ -66,7 +66,12 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="d-flex flex-column justify-content-center align-items-center">
+      <!-- Our Choice Movie -->
+      <div
+        class="ourChoice d-flex flex-md-row flex-column w-75 mt-3 mb-3 justify-content-centera align-items-center"
+      ></div>
+      <!-- Catalog of movies -->
       <div class="catalog d-flex w-100 flex-wrap justify-content-evenly"></div>
     </main>
 
@@ -85,13 +90,13 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Script - Catalog -->
+    <!-- Script - Model Catalog -->
     <script src="./model/Catalog.js"></script>
-    <!-- Script - API -->
+    <!-- Script - Model API -->
     <script src="./model/Api.js"></script>
-    <!-- Script - View -->
+    <!-- Script - index View -->
     <script src="./view/index-view.js"></script>
-    <!-- Script - Controller -->
+    <!-- Script - index Controller -->
     <script src="./controller/index-controller.js"></script>
   </body>
 </html>
