@@ -1,5 +1,8 @@
 .poster {
   border-radius: 10px;
+
+  -webkit-box-shadow: 0px 9px 15px 5px rgba(39, 41, 1, 0.5);
+  box-shadow: 0px 9px 15px 5px rgba(39, 41, 1, 0.5);
 }
 
 .flip-card {
@@ -9,8 +12,11 @@
 
   margin: 20px;
   cursor: pointer;
-  /* border-radius: 10px; */
   overflow: hidden;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 9px 15px 5px rgba(39, 41, 1, 0.5);
+  box-shadow: 0px 9px 15px 5px rgba(39, 41, 1, 0.5);
 }
 
 /* This container is needed to position the front and back side */

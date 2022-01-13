@@ -21,7 +21,7 @@ function appendMovieOnScreen(movie) {
 // Create ourChoice HTML and append to ourChoice div
 function appendOurChoiceMovie(movie) {
   $('.ourChoice').append(`
-    <img class="w-50 poster me-5" src="${
+    <img class="w-50 poster me-md-5 mb-5" src="${
       movie.Poster
     }" alt="movie poster" id="${movie.imdbID}" />
       <div class="ourChoiceInfo d-flex flex-column justify-content-md-center align-items-center align-items-md-start">
