@@ -24,13 +24,13 @@ function appendOurChoiceMovie(movie) {
     <img class="w-50 poster me-md-5 mb-5" src="${
       movie.Poster
     }" alt="movie poster" id="${movie.imdbID}" />
-      <div class="ourChoiceInfo d-flex flex-column justify-content-md-center align-items-center align-items-md-start">
+    <div class="ourChoiceInfo d-flex flex-column justify-content-md-center align-items-center align-items-md-start">
       <h2 class='text-warning'>${movie.Title.toUpperCase()}</h2>
       <p class='text-secondary'>${movie.Plot}</p>
       <p>${movie.Runtime} | ${movie.Year} | ${movie.Genre}</p>
       <p class='text-secondary'>${movie.Awards}</p>
       <p> Director: ${movie.Director}</p>
       <p> ${movie.Actors}</p>
-      </div>
+    </div>
   `);
 }

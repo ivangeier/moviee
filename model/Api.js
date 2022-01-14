@@ -1,34 +1,36 @@
 class Api {
-  #urlOMDB = `https://www.omdbapi.com/?apikey=c30ccb91&`;
+  #urlOMDB;
 
-  // fetch data based on URL (PROMISE)
+  constructor() {
+    this.#urlOMDB = `https://www.omdbapi.com/?apikey=c30ccb91&`;
+  }
+
+  // fetch data based on URL
   fetchURL(url) {
-    return new Promise((resolve, reject) => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => resolve(data))
-        .catch((error) => reject(error));
-    });
+    return fetch(url)
+      .then((res) => res.json())
+      .then((data) => data)
+      .catch((error) => error);
   }
 
   // Fetch movies based on title
-  async findMovieTitle(title) {
+  findMovieTitle(title) {
     let url = `${this.#urlOMDB}t=${title}`;
-    let data = await this.fetchURL(url);
+    let data = this.fetchURL(url);
     return data;
   }
 
   // fetch movies based on ID
-  async findMovieID(id) {
+  findMovieID(id) {
     let url = `${this.#urlOMDB}i=${id}`;
-    let data = await this.fetchURL(url);
+    let data = this.fetchURL(url);
     return data;
   }
 
   // fetch CEP (ZIP code from brazil) based on CEP
-  async buscaCEP(cep) {
+  buscaCEP(cep) {
     let url = `https://viacep.com.br/ws/${cep}/json/`;
-    let data = await this.fetchURL(url);
+    let data = this.fetchURL(url);
     return data;
   }
 }
