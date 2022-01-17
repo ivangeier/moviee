@@ -1,0 +1,12 @@
+.searchbar {
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+button {
+  background-color: var(--main-color);
+}
+
+.searchIcon {
+  width: 25px;
+}

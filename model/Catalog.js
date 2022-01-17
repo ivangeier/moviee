@@ -4,6 +4,7 @@ class Catalog {
 
   constructor() {
     this.#catalog = [];
+
     // movies database (IDs)
     this.#movieDB = [
       'tt0038650',
@@ -48,7 +49,6 @@ class Catalog {
 
   // create a random catalog based on movie database | is set to get 13 movies
   createCatalog() {
-    this.#catalog = [];
     while (this.#catalog.length < 13) {
       let id = this.randomID();
       if (this.#catalog.indexOf(this.#movieDB[id]) == -1) {
