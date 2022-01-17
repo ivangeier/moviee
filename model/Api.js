@@ -13,16 +13,23 @@ class Api {
       .catch((error) => error);
   }
 
-  // Fetch movies based on title
+  // request movies based on title
   findMovieTitle(title) {
     let url = `${this.#urlOMDB}t=${title}`;
     let data = this.fetchURL(url);
     return data;
   }
 
-  // fetch movies based on ID
+  // request movies based on ID
   findMovieID(id) {
     let url = `${this.#urlOMDB}i=${id}`;
+    let data = this.fetchURL(url);
+    return data;
+  }
+
+  // fetch all movies based on name/ part of name
+  findMovies(name) {
+    let url = `${this.#urlOMDB}s=${name}`;
     let data = this.fetchURL(url);
     return data;
   }
