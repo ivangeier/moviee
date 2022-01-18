@@ -10,7 +10,9 @@ class Api {
     return fetch(url)
       .then((res) => res.json())
       .then((data) => data)
-      .catch((error) => error);
+      .catch((error) => {
+        return { error: error };
+      });
   }
 
   // request movies based on title

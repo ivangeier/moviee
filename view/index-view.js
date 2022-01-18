@@ -43,3 +43,15 @@ function appendOurChoiceMovie(movie) {
   `
   );
 }
+
+// show a message when service (API) is not available or some error returns
+function serviceNotAvailable() {
+  ourChoice.insertAdjacentHTML(
+    'beforeend',
+    `
+    <div class="d-flex w-100 h-100 mt-5 justify-content-center aligned-items-center">
+      <p class='text-warning'>Ops, it looks our movies runway from the service today. Try again (refresh page)!</p>
+    </div>
+  `
+  );
+}
