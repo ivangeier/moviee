@@ -31,6 +31,18 @@ function appendMovieResult(movie) {
   );
 }
 
+// Movie not found - show message
+function movieNotFound() {
+  searchResult.insertAdjacentHTML(
+    'beforeend',
+    `
+    <div class="d-flex w-100 h-100 justify-content-center aligned-items-center">
+      <p class='text-warning'>Ops, it looks that movies hasn't been created yet. Try another one!</p>
+    </div>
+  `
+  );
+}
+
 // clear all previous results in HTML.
 function clearResults() {
   searchResult.innerHTML = '';
