@@ -4,7 +4,7 @@ Moviee is a simple application to consume movies API (OMDB), you can find some s
 
 ## Screenshot
 
-![](./assets/images.screenshot.png)
+![](/assets/images/screenshot.png)
 
 ## What I learned
 
